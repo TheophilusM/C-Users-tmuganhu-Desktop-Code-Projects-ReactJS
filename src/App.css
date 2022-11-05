@@ -21,3 +21,88 @@ section {
   flex-direction: column;
   align-items: center;
 }
+
+section div:first-child h3 {
+  font-size: 26px;
+  color: rgb(20, 79, 121);
+}
+
+section div:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+section div:nth-child(2) label {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+section div:nth-child(2) input {
+  outline: none;
+  border: 1px solid rgb(183, 183, 183);
+  padding: 5px 5px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+section div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+section div:nth-child(6) button,
+section div:nth-child(3) button {
+  outline: none;
+  border: none;
+  padding: 7px 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  background-color: rgb(14, 105, 185);
+  cursor: pointer;
+}
+
+section div:nth-child(3) button:last-child {
+  background-color: rgb(255, 36, 36);
+}
+
+section div:nth-child(4) .half {
+  color: rgb(17, 113, 208);
+}
+
+section div:nth-child(4) .almost {
+  color: rgb(208, 17, 100);
+}
+
+section div:nth-child(4) p {
+  text-align: center;
+}
+
+section div:nth-child(5) {
+  margin-bottom: 20px;
+}
+
+section div:nth-child(5) h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+section div:nth-child(6) {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+section div:nth-child(6) button {
+  width: 50px;
+  background-color: rgb(81, 171, 86);
+  color: rgb(255, 255, 255);
+}
