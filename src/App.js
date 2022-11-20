@@ -6,8 +6,13 @@ function App() {
   const [intervalTime, setIntervalTime] = useState(1000);
   const [time, setTime] = useState("00");
   const [seconds, setSeconds] = useState("00");
+  const [running, setRunning] = useState(false)
 
   const RunTimer = () => {
+    if (running) {
+      return
+    }
+    setRunning(true);
     setTime("00");
     setSeconds("00");
     if (!minutes || minutes.includes("-") || minutes === 0) {
@@ -17,6 +22,10 @@ function App() {
     var timeoutinseconds = +minutes * 60;
     setInterval(() => {
       if (timeoutinseconds === 0) {
+        setRunning(false);
+        setMinutes(0);
+        setTime("00");
+        setSeconds("00");
         return
       }
       if ((timeoutinseconds / 60).toFixed() > 1) {
@@ -63,10 +72,10 @@ function App() {
         </div>
         <div>
           <h1>
-            {+time < 10 && +time !== 0 ? "0" : ""}
-            {+time}:
-            {+seconds < 10 && +seconds !== 0 ? "0" : ""}
-            {+seconds}
+            {time.length < 2 ? "0" : ""}
+            {time}:
+            {seconds.length < 2 ? "0" : ""}
+            {seconds}
           </h1>
         </div>
         <div>
